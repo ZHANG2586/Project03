@@ -1,0 +1,51 @@
+{
+  "name": "mark123",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@uiw/react-md-editor": "^3.4.10",
+    "antd": "^4.16.9",
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "docxtemplater": "^3.22.3",
+    "file-saver": "^2.0.5",
+    "jszip-utils": "^0.1.0",
+    "mongoose": "^5.13.5",
+    "pizzip": "^3.0.6",
+    "react": "^17.0.2",
+    "react-cookie": "^4.0.3",
+    "react-dom": "^17.0.2",
+    "react-markdown": "^6.0.2",
+    "react-rnd": "^10.3.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

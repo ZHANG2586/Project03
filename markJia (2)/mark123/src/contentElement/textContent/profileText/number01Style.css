@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.contentFather{
+    width:100%;
+    /* margin-top: 50px; */
+    height: 100%;
+    overflow:scroll;
+}
+.content{
+   width: 65%;
+   padding-top: 20px;
+   margin:  0 auto;
+}
+h1,h2{margin-top: 28px;}
+p{margin-top: 24px;}
+ul{padding-left: 20px;}
+h1::before{content: "H1";font-size: 14px;color: #a5adb9;margin-left:-23px;padding-right:4px ;}
+h2::before{content: "H2";font-size: 14px;color: #a5adb9;margin-left:-23px;padding-right:4px ;}
+.content a{text-decoration: none;color: rgba(239,68,68,1) }

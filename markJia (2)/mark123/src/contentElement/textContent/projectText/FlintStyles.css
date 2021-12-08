@@ -1,0 +1,11 @@
+.language-bash{
+    display: flex;
+    flex-direction: column;
+    color: black; 
+    background: none;
+    text-shadow: white 0px 1px; 
+    font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.5; tab-size: 4; hyphens: none;
+}
+.token{
+    color: rgb(221, 74, 104); 
+}

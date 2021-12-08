@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+.scroll{overflow-y: scroll;height: 100%;overflow-x: hidden;}
+.left_nav{
+    width: 170px;
+    height: 100%;
+    background-color: #3a4556;
+    border-right:1px solid white;
+}
+.h-12{
+    position: relative;
+    display: flex;
+    width: 157px;
+    height: 48px;
+    line-height: 48px;
+    justify-content:flex-end;
+    align-items: center;
+}
+.public0{
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+.oneNav{
+    width: 157px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;    
+}
+.weSame{width: 100%;height: 32px;display: flex;}
+.weSame:hover{ --tw-bg-opacity: 1; background-color: rgba(75,85,99,var(--tw-bg-opacity));}
+.gray-600 :hover{ --tw-bg-opacity: 1;background-color: rgba(75,85,99,var(--tw-bg-opacity));;}
+.oneNav a{
+    width: 157px;
+    height: 32px;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    padding-left: 24px;
+    text-decoration: none;
+    line-height: 24px;
+}
+.oneNav a:hover{color: white;}
+.oneNav svg{
+    width: 26px;
+    height: 16px;
+    padding-right: 10px;
+}
+
+/* 中间的 */
+.middle_nav{
+    width: 256px;
+}
+.right_nav{ 
+    display: flex;
+    flex-direction: column;
+    flex: auto; /* //flex(1 1 0) */
+    height: 100%;
+    /* justify-content:space-between; */
+    justify-content: flex-start;
+    background-color: #ffffff;
+    list-style: none;
+}

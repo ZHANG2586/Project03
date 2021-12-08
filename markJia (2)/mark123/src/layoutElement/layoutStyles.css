@@ -1,0 +1,7 @@
+body{position: fixed;top: 0;bottom: 0;left: 0;right: 0;} 
+#root{width: 100%;height: 100%;position: absolute;left: 0;top: 0;}
+.react-draggable{ border: 1px solid rgb(121, 19, 19);}
+.quanping{position: absolute;top: 0;left: 0;}
+#allSection{ width: 100%;height:100%;display: flex;flex-direction: column;position: relative;}
+.head01{width: 100%;height: 24px;background-color: #f3f5f9; border-top-left-radius:0.5rem; border-top-right-radius:0.5rem;z-index: 1000000;}
+.main_section {overflow-y:hidden ; display: flex; width: 100%;position: absolute;top: 24px;bottom: 0;border-bottom-left-radius:0rem;border-bottom-right-radius:0.5rem;}

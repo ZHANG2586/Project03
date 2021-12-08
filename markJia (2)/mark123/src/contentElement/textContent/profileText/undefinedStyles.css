@@ -1,0 +1,16 @@
+.right_nav>button{
+    background-color: #3a4556;;
+    margin-top:50px;
+    
+    width: 140px;
+    height: 40px;
+    line-height: 30px;
+    font-size: 16px;
+}
+.textEditor >button{
+    width: 100px;
+    height: 20px;
+    color: #FFFFFF;
+    background-color: red;
+    border-radius: 0.5rem;
+}
