@@ -65,7 +65,7 @@ function Lockscreen (props) {
                 </div>
 
                 <div className='nickname'>
-                          <h3>召吉里的何梦茹</h3>
+                          {/* <h3>召吉里的何梦茹</h3> */}
                               {/* <input  type="text"
                                 placeholder='请输入用户名'
                                 onChange={(e)=>{changeValue(e)}}

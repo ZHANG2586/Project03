@@ -28,6 +28,8 @@ import Header from './component/header'
 
 import songsrc from '../../assets/media/想去海边.mp3'
 import { withRouter } from 'react-router-dom';
+import NewHeader from './component/newHeader'
+
 
 function Lockscreen(props) {
     var myDate = new Date()
@@ -750,8 +752,8 @@ const exitFullScreen=() =>{
         return false;
     }
 
-    
-
+    let [state,setState]=new useState({x:100,y:100,width:940,height:500});
+    let [state1,setState1]=new useState({x:100,y:100,width:940,height:500});
 
       return (
             
@@ -1044,32 +1046,102 @@ const exitFullScreen=() =>{
             
 
             <Rnd
-                style={{position:'absolute',left:100,top:100,borderRadius:'18px',overflow:'hidden'}}
-                minWidth={200}   minHeight={200}
-                position={{x:100,y:100}}
-                size={{ width:940, height:500}}
-                dragHandleClassName='coverIframe'
-                enableResizing={true}
+                size={{width:state1.width,height:state1.height}}
+                style={{borderTop:'20px solid #f6f6f6',borderRadius:'10px',backgroundColor:'transparent'}}
+                position={{x: state1.x,y: state1.y}}
+                onResizeStop={
+                    (e,direction,ref,delta,position)=>{
+                        setState1({
+                            width:ref.style.width,
+                            height: ref.style.height,
+                            ...position,
+                        })
+                    }
+                }
+                onDragStop={(e,d)=>{  
+                    if(e.target.viewBox !== undefined){
+                          return;
+                    };
+                   setState1((prestate)=>{      
+                   return {x:d.lastX,y:d.lastY,width:prestate.width,height:prestate.height}})}}
+                
                 className="rnd"
                 > 
               
-            <Header/>  
+              <NewHeader stateParent={state1} change={(obj)=>{setState1(obj);}}/>
             <iframe style={{width:'100%',height:'100%'}} src={'http://localhost:3001'} frameborder="0" className="iframe01"></iframe>
             
             </Rnd>
-            <Rnd
-                style={{position:'absolute',zIndex:'1',left:100,top:100,borderRadius:'18px',overflow:'hidden'}}
+          
+            <Rnd 
+             size={{width:state.width,height:state.height}}
+             style={{borderTop:'20px solid #f6f6f6',borderRadius:'10px',backgroundColor:'transparent'}}
+             position={{x: state.x,y: state.y}}
+             onResizeStop={
+                    (e,direction,ref,delta,position)=>{
+                        setState({
+                            width:ref.style.width,
+                            height: ref.style.height,
+                            ...position,
+                        })
+                    }
+                }
+             onDragStop={(e,d)=>{  
+                 if(e.target.viewBox !== undefined){
+                       return;
+                 };
+                setState((prestate)=>{             
+                return {x:d.lastX,y:d.lastY,width:prestate.width,height:prestate.height}})
+            }
+             }
+            >   
+                 <NewHeader stateParent={state} change={(obj)=>{setState(obj);}}/>
+                <iframe  style={{position:'relative',zIndex:0,width:'100%',height:'100%'}} src={"http://localhost:3002/?username="+props.location.query} frameborder="0" className="iframe02"></iframe>
+               
+            </Rnd>
+            {/* <Rnd
+                // default={{
+                //     x: state.x,
+                //     y: state.y,
+                //     width:940,
+                //     height:500
+                // }}
+                style={{overflow:'hidden',backgroundColor:'red'}}
+                size={{width:state.width,height: state.height}}
+                position={{x:state.x, height:state.y}}
+                onDragStop={(e,d)=>{
+                     console.log(e);
+                     console.log(d);
+                     console.log(state);
+                     setState({...state,x:e.screenX,y:e.screenY});
+                     console.log(state);
+                }}
+                // onResizeStop={
+                //     (e,direction,ref,delta,position)=>{
+                //         console.log(e);
+                //         console.log(direction);
+                //         console.log(ref);
+                //         console.log(delta);
+                //         console.log(position);
+                //         setState({
+                //             width:ref.style.width,
+                //             height: ref.style.height,
+                //             ...position,
+                //         })
+                //     }
+                // }
+                // style={{position:'absolute',zIndex:'1',left:100,top:100,borderRadius:'18px',overflow:'hidden'}}
                 minWidth={200}   minHeight={200}
-                position={{x:100,y:100}}
-                size={{ width:940, height:500}}
-                dragHandleClassName='coverIframe'
-                enableResizing={true}
+                // position={{x:100,y:100}}
+                // size={{ width:940, height:500}}
+                // dragHandleClassName='coverIframe'
+                // enableResizing={true}
                 className="rnd2"
                 > 
-            <Header/>  
-            <iframe style={{width:'100%',height:'100%'}} src={"http://localhost:3002/?username="+props.location.query} frameborder="0" className="iframe02"></iframe>
+            {/*   */}
+            {/* <iframe  style={{width:'100%',height:'100%'}} src={"http://localhost:3002/?username="+props.location.query} frameborder="0" className="iframe02"></iframe> */}
             
-            </Rnd>
+            {/* </Rnd> */} 
            
             {/* 鼠标右键弹窗 */}
             <div

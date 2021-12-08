@@ -9,6 +9,7 @@
   color: #fff;
 }
 .block {
+
   display: block;
 }
 .none {
@@ -1008,6 +1009,10 @@
 .homepagefull .bottom {
   width: 576px;
   height: 70px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   background-color: #fff3;
   padding-left: 0.2rem;
   padding-right: 0;
@@ -1026,6 +1031,13 @@
 }
 .ml-end {
   margin-left: 10px;
+}
+/* .ml-end:hover{
+
+} */
+.homepagefull .bottom:hover{
+  width: 640px;
+  justify-content: space-between;
 }
 .homepagefull .bottom ul li img {
   width: 62px;
